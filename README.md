@@ -5,7 +5,7 @@ my finances.
 These scripts generate two CSV files
 * orders.csv
 	* Spreadsheet of all orders made on your Robinhood account
-* sorted\_stockwise\_pl.csv
+* stockwise\_pl.csv
 	* Spreadsheet of the net Profit/Loss of each company/stock you've
 	ever traded on your Robinhood account, sorted with your biggest
 	gains at the top, and biggest losses at the bottom.
@@ -32,3 +32,7 @@ python3 finance_tracker.py
 NOTE: Running `finance_tracker.py` will prompt you to enter your Robinhood
 account login information in order to scrape the data. Your login information
 will not be saved or recorded in any way.
+
+The CSV files generated, `orders.csv` and `stockwise_pl.csv`, can be
+opened with Microsoft Excel, and Google Sheets in order to see a nicely
+formatted spreadsheet rather than a text file.

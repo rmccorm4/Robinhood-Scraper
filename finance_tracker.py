@@ -98,7 +98,7 @@ if __name__ == '__main__':
 	stocks = itemize_stocks()
 	calculate_itemized_pl(stocks)
 
-	with open('sorted_stockwise_pl.csv', 'w') as outfile:
+	with open('stockwise_pl.csv', 'w') as outfile:
 		writer = csv.writer(outfile, delimiter=',')
 		writer.writerow(['SYMBOL', 'NET_P/L', '# BUYS/SELLS'])
 		sorted_pl = sorted(stocks.values(), key=operator.attrgetter('net_pl'), reverse=True)
