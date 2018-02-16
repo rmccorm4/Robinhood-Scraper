@@ -15,4 +15,20 @@ easier and aesthetically pleasing. I'm starting with Tkinter() for
 simplicity but plan to try out PyQt5 in the near future.
 
 ## How to Use
-Until I get the GUI working, you will only need Python3
+Until I get the GUI working, you will only need Python3 and the Robinhood
+Private API which is already included in this repository, and can be setup
+by executing the following in your terminal:
+```
+cd Robinhood
+pip install .
+```
+
+Once the Robinhood API is setup correctly, you can generate the CSV files
+by executing:
+```
+python3 finance_tracker.py
+```
+
+NOTE: Running `finance_tracker.py` will prompt you to enter your Robinhood
+account login information in order to scrape the data. Your login information
+will not be saved or recorded in any way.
