@@ -13,3 +13,6 @@ These scripts generate two CSV files
 I am currently working on a simple GUI to make the experience a little
 easier and aesthetically pleasing. I'm starting with Tkinter() for 
 simplicity but plan to try out PyQt5 in the near future.
+
+## How to Use
+Until I get the GUI working, you will only need Python3
