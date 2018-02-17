@@ -26,10 +26,10 @@ pip install .
 Once the Robinhood API is setup correctly, you can generate the CSV files
 by executing:
 ```
-python3 finance_tracker.py
+python3 get_robinhood_pl.py
 ```
 
-NOTE: Running `finance_tracker.py` will prompt you to enter your Robinhood
+NOTE: Running `get_robinhood_pl.py` will prompt you to enter your Robinhood
 account login information in order to scrape the data. Your login information
 will not be saved or recorded in any way.
 
