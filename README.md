@@ -50,3 +50,6 @@ python3 demo.py
 The code is currently messy and mostly copy and pasted from `robinhood_pl.py`
 but I had to throw together a demo for an event and didn't want to go
 messing anything up to much at the last minute.
+
+`gui.py` is currently in progress for having a user interface rather than
+using the command line.
