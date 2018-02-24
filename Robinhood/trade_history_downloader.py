@@ -42,18 +42,20 @@ def get_all_history_orders(rb_client):
     past_orders = rb_client.order_history()
     orders.extend(past_orders['results'])
     while past_orders['next']:
-        print("{} order fetched".format(len(orders)))
+        print("{} orders fetched".format(len(orders)))
         next_url = past_orders['next']
         past_orders = fetch_json_by_url(rb_client, next_url)
         orders.extend(past_orders['results'])
-    print("{} order fetched".format(len(orders)))
+    print("{} orders fetched".format(len(orders)))
     return orders
 
 
-def orders_to_csv():
+def orders_to_csv(username, pw):
 	rb = Robinhood()
-	#rb.login(username="name", password="pass")
-	rb.login_prompt()
+	if username is not None and password is not None:
+		rb.login(username="name", password="pass")
+	else:
+		rb.login_prompt()
 	past_orders = get_all_history_orders(rb)
 	instruments_db = shelve.open('instruments.db')
 	orders = [order_item_info(order, rb, instruments_db) for order in past_orders]
@@ -63,8 +65,9 @@ def orders_to_csv():
 		dict_writer = csv.DictWriter(outfile, keys)
 		dict_writer.writeheader()
 		dict_writer.writerows(orders)
+		print('Generating spreadsheets...')
 		print('Created', outfile.name, 'in this directory.')
-	os.remove('instruments.db')
+	#os.remove('instruments.db')
 
 if __name__ == '__main__':
 	orders_to_csv()

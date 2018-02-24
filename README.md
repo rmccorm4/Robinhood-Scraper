@@ -26,13 +26,27 @@ pip install .
 Once the Robinhood API is setup correctly, you can generate the CSV files
 by executing:
 ```
-python3 get_robinhood_pl.py
+python3 robinhood_pl.py
 ```
 
-NOTE: Running `get_robinhood_pl.py` will prompt you to enter your Robinhood
+NOTE: Running `robinhood_pl.py` will prompt you to enter your Robinhood
 account login information in order to scrape the data. Your login information
 will not be saved or recorded in any way.
+
+## Spreadsheets
 
 The CSV files generated, `orders.csv` and `stockwise_pl.csv`, can be
 opened with Microsoft Excel, and Google Sheets in order to see a nicely
 formatted spreadsheet rather than a text file.
+
+### Additional
+
+To see a Pie Chart of your profits/losses, run:
+
+```
+python3 demo.py
+```
+
+The code is currently messy and mostly copy and pasted from `robinhood_pl.py`
+but I had to throw together a demo for an event and didn't want to go
+messing anything up to much at the last minute.

@@ -26,8 +26,8 @@ class Stock:
 		self.net_shares = 0
 		self.net_pl = 0
 
-def generate_csv():
-	trade_history_downloader.orders_to_csv()
+def generate_csv(username=None, password=None):
+	trade_history_downloader.orders_to_csv(username, password)
 
 def itemize_stocks():
 	# Create list for each stock
