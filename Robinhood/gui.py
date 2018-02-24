@@ -61,24 +61,6 @@ class PopUpWindow(object):
 		self.password = self.pwLogin.get()
 		self.top.destroy()
 
-"""
-class MyDialog:
-	def __init__(self, parent):
-		self.top = Toplevel(parent)
-
-		Label(self.top, text="Value").pack()
-
-		self.e = Entry(self.top)
-		self.e.pack(padx=5)
-
-		b = Button(self.top, text="OK", command=self.ok)
-		b.pack(pady=5)
-
-	def ok(self):
-		print("value is", self.e.get())
-		self.top.destroy()
-"""
-
 def start_gui():
 	root = Tk()
 	root.geometry("800x600")
