@@ -65,6 +65,7 @@ def orders_to_csv(username, pw):
 		dict_writer = csv.DictWriter(outfile, keys)
 		dict_writer.writeheader()
 		dict_writer.writerows(orders)
+		print('------------------------------------------------')
 		print('Generating spreadsheets...')
 		print('Created', outfile.name, 'in this directory.')
 	#os.remove('instruments.db')
