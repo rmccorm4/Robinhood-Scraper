@@ -20,7 +20,7 @@ Private API which is already included in this repository, and can be setup
 by executing the following in your terminal:
 ```
 cd Robinhood
-pip333 install .
+pip3 install .
 ```
 
 Once the Robinhood API is setup correctly, you can generate the CSV files
